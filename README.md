@@ -1,5 +1,9 @@
 # php-fpm
-PHP-FPM Docker image with most used PHP extensions installed
+
+## php 5.6 fpm
+
+PHP-FPM Docker image with most used PHP extensions installed.
+This reflects a typical php available on many commercial (and even some free) shared hosting.
 
 Extensions installed:
 * bz2
@@ -27,3 +31,13 @@ docker pull creativeprojects/php-fpm:5.6.8
 docker pull creativeprojects/php-fpm:5.6.28
 ```
 
+
+## php 7.0 fpm
+
+Almost the same image as the 5.6 ones, except the module _mysql_ which doesn't exist any more (and was deprecated for quite some time).
+
+To download the latest image:
+
+```
+docker pull creativeprojects/php-fpm:7.0.12
+```

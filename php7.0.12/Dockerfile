@@ -1,0 +1,16 @@
+FROM php:7.0.12-fpm
+
+MAINTAINER Fred <Fred@CreativeProjects.Tech>
+
+RUN apt-get update && apt-get install -y \
+        libbz2-dev \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libmcrypt-dev \
+        libpng12-dev \
+    && docker-php-ext-install bz2 calendar exif gettext mbstring mcrypt mysqli pdo_mysql sockets zip \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include --with-jpeg-dir=/usr/include \
+    && docker-php-ext-install gd \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
