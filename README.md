@@ -41,3 +41,15 @@ To download the latest image:
 ```
 docker pull creativeprojects/php-fpm:7.0.12
 ```
+
+
+## php 7.1 fpm
+
+Same configuration as php 7.0 images
+
+
+To download the latest image:
+
+```
+docker pull creativeprojects/php-fpm:7.1.0
+```
