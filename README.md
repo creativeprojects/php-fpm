@@ -2,8 +2,8 @@
 
 ## php 5.6 fpm
 
-PHP-FPM Docker image with most used PHP extensions installed.
-This reflects a typical php available on many commercial (and even some free) shared hosting.
+PHP-FPM Docker image with all the most used PHP extensions installed.
+This reflects a typical PHP host available on many commercial shared hosting platforms (and even some free ones).
 
 Extensions installed:
 * bz2
