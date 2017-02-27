@@ -1,6 +1,6 @@
 #!/bin/sh
 
-current_version=5.6.28
+current_version=7.1.0
 image_name=creativeprojects/php-fpm
 
 docker pull php:${current_version}-fpm

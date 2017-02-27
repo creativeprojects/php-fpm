@@ -5,7 +5,10 @@
 PHP-FPM Docker image with all the most used PHP extensions installed.
 This reflects a typical PHP host available on many commercial shared hosting platforms (and even some free ones).
 
-Extensions installed:
+Please note these images are not always the very latest ones available.
+It's because I follow the images used by the different shared hosting platform I'm using for my projects.
+
+Common hosting platform extensions installed:
 * bz2
 * calendar
 * exif
@@ -18,6 +21,10 @@ Extensions installed:
 * sockets
 * zip
 * gd
+
+Development extensions installed:
+* tideways (php profiler compatible with xhprof from facebook)
+* xdebug
 
 For historical reasons, I'm using php 5.6.8, and the latest (5.6.28)
 
