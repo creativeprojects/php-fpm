@@ -23,8 +23,7 @@ Common hosting platform extensions installed:
 * gd
 
 Development extensions installed:
-* tideways (php profiler compatible with xhprof from facebook)
-* xdebug
+* xdebug (with "profiler_enable_trigger" and "trace_enable_trigger" both enabled)
 
 For historical reasons, I'm using php 5.6.8, and the latest (5.6.28)
 
@@ -60,3 +59,16 @@ To download the latest image:
 ```
 docker pull creativeprojects/php-fpm:7.1.0
 ```
+
+## xdebug
+
+xdebug is configured with these options:
+
+xdebug.coverage_enable=0
+xdebug.profiler_enable_trigger=1
+xdebug.profiler_output_dir=/tmp/xdebug
+xdebug.show_mem_delta=1
+xdebug.trace_enable_trigger=1
+xdebug.trace_output_dir=/tmp/xdebug
+
+If you want to see the profiles, you can use my [webgrind docker image](https://github.com/creativeprojects/webgrind.docker)
