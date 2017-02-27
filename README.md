@@ -64,11 +64,13 @@ docker pull creativeprojects/php-fpm:7.1.0
 
 xdebug is configured with these options:
 
+```
 xdebug.coverage_enable=0
 xdebug.profiler_enable_trigger=1
 xdebug.profiler_output_dir=/tmp/xdebug
 xdebug.show_mem_delta=1
 xdebug.trace_enable_trigger=1
 xdebug.trace_output_dir=/tmp/xdebug
+```
 
 If you want to see the profiles, you can use my [webgrind docker image](https://github.com/creativeprojects/webgrind.docker)
