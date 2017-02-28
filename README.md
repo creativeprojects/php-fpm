@@ -25,7 +25,7 @@ Common hosting platform extensions installed:
 Development extensions installed:
 * xdebug (with "profiler_enable_trigger" and "trace_enable_trigger" both enabled)
 
-For historical reasons, I'm using php 5.6.8, and the latest (5.6.28)
+For historical reasons, I'm using php 5.6.8, and the latest (5.6.30)
 
 To download an image:
 
@@ -37,15 +37,27 @@ docker pull creativeprojects/php-fpm:5.6.8
 docker pull creativeprojects/php-fpm:5.6.28
 ```
 
+```
+docker pull creativeprojects/php-fpm:5.6.30
+```
+
 
 ## php 7.0 fpm
 
 Almost the same image as the 5.6 ones, except the module _mysql_ which doesn't exist any more (and was deprecated for quite some time).
 
-To download the latest image:
+To download the latest images:
+
+```
+docker pull creativeprojects/php-fpm:7.0.7
+```
 
 ```
 docker pull creativeprojects/php-fpm:7.0.12
+```
+
+```
+docker pull creativeprojects/php-fpm:7.0.16
 ```
 
 
@@ -54,10 +66,14 @@ docker pull creativeprojects/php-fpm:7.0.12
 Same configuration as php 7.0 images
 
 
-To download the latest image:
+To download the latest images:
 
 ```
 docker pull creativeprojects/php-fpm:7.1.0
+```
+
+```
+docker pull creativeprojects/php-fpm:7.1.2
 ```
 
 ## xdebug

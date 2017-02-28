@@ -3,6 +3,8 @@ FROM php:PHP_VERSION-fpm
 LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
       version="PHP_VERSION-fpm"
 
+VOLUME /tmp/xdebug
+
 RUN apt-get update && apt-get install -y \
         libbz2-dev \
         libfreetype6-dev \
@@ -10,21 +12,12 @@ RUN apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng12-dev \
         libcurl4-openssl-dev libpcre3-dev \
-        git \
     && docker-php-ext-install bz2 calendar exif gettext mbstring mcrypt mysqli pdo_mysql sockets zip \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include --with-jpeg-dir=/usr/include \
     && docker-php-ext-install gd \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN pecl install xdebug-2.5.0
-
-RUN git clone https://github.com/tideways/php-profiler-extension.git \
-    && cd php-profiler-extension \
-    && phpize \
-    && ./configure \
-    && make install \
-    && cd .. \
-    && rm -rf php-profiler-extension
+    && pecl install xdebug-2.5.0 \
+    && apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/* \
+    && chmod 777 /tmp/xdebug
 
 COPY ext-*.ini /usr/local/etc/php/conf.d/
