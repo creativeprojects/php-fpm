@@ -1,6 +1,6 @@
 #!/bin/sh
 
-current_version=7.1.0
+current_version=7.1.6
 image_name=creativeprojects/php-fpm
 
 if [ -n "$1" ]; then
