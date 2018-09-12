@@ -9,6 +9,7 @@ for php_version in ${php_versions}; do
     main_version=${php_version%.*}
     echo "Will generate docker image for PHP ${main_version} (${php_version}):"
     cd php${main_version}
+    docker pull creativeprojects/webgrind:latest
     docker pull php:${php_version}-fpm
     docker rmi ${image_name}:${main_version}
     docker rmi ${image_name}:latest
