@@ -5,8 +5,9 @@ LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
 
 VOLUME /tmp/xdebug
 
-RUN apt-get update && apt-get install -y \
-        libbz2-dev \
+RUN http_proxy=$http_proxy apt-get update \
+    && http_proxy=$http_proxy apt-get install -y \
+        libbz2-dev libzip-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
@@ -16,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install bz2 calendar exif gettext mbstring mcrypt mysqli pdo_mysql pgsql pdo_pgsql sockets zip \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include --with-jpeg-dir=/usr/include \
     && docker-php-ext-install gd \
-    && pecl install xdebug \
+    && pecl install xdebug-2.6.1 \
     && pecl install igbinary \
     && printf "yes\n" | pecl install redis \
     && apt-get autoremove -y \

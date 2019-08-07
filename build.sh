@@ -1,26 +1,25 @@
 #!/bin/sh
 
 image_name=creativeprojects/php-fpm
-php_versions="5.6.34 7.0.32 7.0.33 7.1.23"
+php_versions="5.6.34 7.0.33 7.1.31 7.2.21 7.3.4"
 
 cd $(dirname "${0}")
 
 for php_version in ${php_versions}; do
     main_version=${php_version%.*}
     echo "Will generate docker image for PHP ${main_version} (${php_version}):"
-    cd php${main_version}
     docker pull creativeprojects/webgrind:latest
     docker pull php:${php_version}-fpm
     docker rmi ${image_name}:${main_version}
     docker rmi ${image_name}:latest
-    sed -e "s/PHP_VERSION/${php_version}/g" Dockerfile.template > Dockerfile
+    sed -e "s/PHP_VERSION/${php_version}/g" php${main_version}.Dockerfile > Dockerfile
     docker build \
-        -t ${image_name}:${php_version} \
-        -t ${image_name}:${main_version} \
-        -t ${image_name}:latest \
+        --build-arg http_proxy=${http_proxy} \
+        --tag ${image_name}:${php_version} \
+        --tag ${image_name}:${main_version} \
+        --tag ${image_name}:latest \
         ./
     rm Dockerfile
-    cd ..
 done
 
 echo "Pushing images to docker repository..."

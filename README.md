@@ -21,59 +21,71 @@ Common hosting platform extensions installed:
 * sockets
 * zip
 * gd
+* PECL igbinary and phpredis
 
 Development extensions installed:
-* xdebug (with "profiler_enable_trigger" and "trace_enable_trigger" both enabled)
+* xdebug 2.5.5 (with "profiler_enable_trigger" and "trace_enable_trigger" both enabled)
 
-For historical reasons, I'm using php 5.6.8, and the latest (5.6.30)
+For historical reasons, I'm using php 5.6.34
+
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php5.6.Dockerfile)
 
 To download an image:
 
 ```
-docker pull creativeprojects/php-fpm:5.6.8
-```
-
-```
-docker pull creativeprojects/php-fpm:5.6.28
-```
-
-```
-docker pull creativeprojects/php-fpm:5.6.30
+docker pull creativeprojects/php-fpm:5.6.34
 ```
 
 
 ## php 7.0 fpm
 
-Almost the same image as the 5.6 ones, except the module _mysql_ which doesn't exist any more (and was deprecated for quite some time).
+Almost the same image as the 5.6 ones, except for the deprecated module _mysql_. Included: _xdebug_ 2.6.1
+
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php7.0.Dockerfile)
 
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.0.7
-```
-
-```
-docker pull creativeprojects/php-fpm:7.0.12
-```
-
-```
-docker pull creativeprojects/php-fpm:7.0.16
+docker pull creativeprojects/php-fpm:7.0.33
 ```
 
 
 ## php 7.1 fpm
 
-Same configuration as php 7.0 images
+Same configuration as php 7.0 images, except for the deprecated module _mcrypt_. Included: _xdebug_ 2.7.2
 
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php7.1.Dockerfile)
 
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.1.0
+docker pull creativeprojects/php-fpm:7.1.31
 ```
 
+
+## php 7.2 fpm
+
+Same configuration as php 7.1 images
+
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php7.2.Dockerfile)
+
+To download the latest images:
+
 ```
-docker pull creativeprojects/php-fpm:7.1.2
+docker pull creativeprojects/php-fpm:7.2.21
+```
+
+
+## php 7.3 fpm
+
+Same configuration as php 7.2 images
+
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php7.3.Dockerfile)
+
+To download the latest images:
+
+```
+docker pull creativeprojects/php-fpm:7.3.4
 ```
 
 ## xdebug
