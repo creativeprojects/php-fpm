@@ -5,9 +5,9 @@ LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
 
 VOLUME /tmp/xdebug
 
-RUN http_proxy=$http_proxy apt-get update \
-    && http_proxy=$http_proxy apt-get upgrade -y \
-    && http_proxy=$http_proxy apt-get install -y \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
         libbz2-dev libzip-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
