@@ -14,6 +14,7 @@ for php_version in ${php_versions}; do
     docker rmi ${image_name}:latest
     sed -e "s/PHP_VERSION/${php_version}/g" php${main_version}.Dockerfile > Dockerfile
     docker build \
+        --pull \
         --build-arg http_proxy=${http_proxy} \
         --tag ${image_name}:${php_version} \
         --tag ${image_name}:${main_version} \
