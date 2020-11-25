@@ -18,7 +18,7 @@ RUN apt-get update \
     && docker-php-ext-install bz2 calendar exif gettext mbstring mcrypt mysqli pdo_mysql pgsql pdo_pgsql sockets zip \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include --with-jpeg-dir=/usr/include \
     && docker-php-ext-install gd \
-    && pecl install xdebug-2.6.1 \
+    && pecl install xdebug-2.7.2 \
     && pecl install igbinary \
     && printf "yes\n" | pecl install redis \
     && apt-get autoremove -y \
