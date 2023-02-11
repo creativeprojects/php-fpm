@@ -78,14 +78,26 @@ docker pull creativeprojects/php-fpm:7.2.21
 
 ## php 7.3 fpm
 
-Same configuration as php 7.2 images
+Same configuration as php 7.2 images, including _xdebug_ 3.1
 
 [Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php7.3.Dockerfile)
 
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.3.4
+docker pull creativeprojects/php-fpm:7.3.33
+```
+
+## php 7.4 fpm
+
+Same configuration as php 7.3 images
+
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php7.4.Dockerfile)
+
+To download the latest images:
+
+```
+docker pull creativeprojects/php-fpm:7.4.33
 ```
 
 ## xdebug
