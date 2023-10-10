@@ -100,6 +100,18 @@ To download the latest images:
 docker pull creativeprojects/php-fpm:7.4.33
 ```
 
+## php 8.2 fpm
+
+Same configuration as php 7.4 images, including _xdebug_ 3.2
+
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php8.2.Dockerfile)
+
+To download the latest images:
+
+```
+docker pull creativeprojects/php-fpm:8.2.7
+```
+
 ## xdebug
 
 xdebug is configured with these options:
