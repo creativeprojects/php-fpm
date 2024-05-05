@@ -1,7 +1,7 @@
 #!/bin/sh
 
 image_name=creativeprojects/php-fpm
-php_versions="5.6.34 7.4.33 8.2.7"
+php_versions="7.4.33 8.2.18"
 
 cd $(dirname "${0}")
 
