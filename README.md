@@ -46,7 +46,7 @@ Almost the same image as the 5.6 ones, except for the deprecated module _mysql_.
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.0.33
+docker pull creativeprojects/php-fpm:7.0
 ```
 
 
@@ -59,7 +59,7 @@ Same configuration as php 7.0 images, except for the deprecated module _mcrypt_.
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.1.31
+docker pull creativeprojects/php-fpm:7.1
 ```
 
 
@@ -72,7 +72,7 @@ Same configuration as php 7.1 images
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.2.21
+docker pull creativeprojects/php-fpm:7.2
 ```
 
 
@@ -85,7 +85,7 @@ Same configuration as php 7.2 images, including _xdebug_ 3.1
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.3.33
+docker pull creativeprojects/php-fpm:7.3
 ```
 
 ## php 7.4 fpm
@@ -97,19 +97,31 @@ Same configuration as php 7.3 images
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:7.4.33
+docker pull creativeprojects/php-fpm:7.4
 ```
 
 ## php 8.2 fpm
 
-Same configuration as php 7.4 images, including _xdebug_ 3.2
+Same configuration as php 7.4 images, including _xdebug_ 3.4
 
 [Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php8.2.Dockerfile)
 
 To download the latest images:
 
 ```
-docker pull creativeprojects/php-fpm:8.2.7
+docker pull creativeprojects/php-fpm:8.2
+```
+
+## php 8.4 fpm
+
+Same configuration as php 8.2 images, including _xdebug_ 3.4
+
+[Docker file](https://github.com/creativeprojects/php-fpm/blob/master/php8.4.Dockerfile)
+
+To download the latest images:
+
+```
+docker pull creativeprojects/php-fpm:8.4
 ```
 
 ## xdebug

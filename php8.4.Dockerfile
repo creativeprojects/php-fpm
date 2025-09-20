@@ -9,10 +9,10 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \
         libbz2-dev libzip-dev \
-        libfreetype6-dev \
-        libjpeg62-turbo-dev \
+        libfreetype-dev \
+        libjpeg-dev \
         libpng-dev \
-        libcurl4-openssl-dev libpcre3-dev \
+        libcurl4-openssl-dev libpcre2-dev \
         libpq5 libpq-dev \
         libonig5 libonig-dev \
         gnupg \
