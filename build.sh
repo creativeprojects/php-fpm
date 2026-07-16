@@ -1,9 +1,9 @@
 #!/bin/sh
 
 image_name=creativeprojects/php-fpm
-php_versions="8.2.28 8.2.29 8.4.11"
+php_versions="8.2.32 8.4.23"
 
-cd $(dirname "${0}")
+cd $(dirname "${0}") || exit 1
 
 for php_version in ${php_versions}; do
     main_version=${php_version%.*}
