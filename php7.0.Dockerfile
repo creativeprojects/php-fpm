@@ -1,8 +1,5 @@
 FROM php:PHP_VERSION-fpm
 
-LABEL maintainer="Fred <Fred@CreativeProjects.Tech>" \
-      version="PHP_VERSION-fpm"
-
 VOLUME /tmp/xdebug
 
 RUN apt-get update \
