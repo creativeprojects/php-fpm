@@ -1,4 +1,5 @@
-FROM php:PHP_VERSION-fpm
+ARG PHP_VERSION=8.2
+FROM php:${PHP_VERSION}-fpm
 
 VOLUME /tmp/xdebug
 
